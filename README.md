@@ -1,6 +1,6 @@
 # 🎓 English Seekho — NLP Chatbot for English Learning in Rural Schools
 
-> **Project #88 · AI & AIML · Education – Language Learning**
+> AI & AIML · Education – Language Learning**
 > An NLP-powered chatbot that helps students in rural schools learn English — completely free, no internet required after setup, no paid APIs.
 
 ---
