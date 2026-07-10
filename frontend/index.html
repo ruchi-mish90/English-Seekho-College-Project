@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>English Seekho — English Learning Chatbot</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="app-header">
+    <div class="header-left">
+      <div class="bot-avatar">🎓</div>
+      <div class="header-info">
+        <h1>English Seekho</h1>
+        <span class="subtitle">अंग्रेजी सीखो • Learn English</span>
+      </div>
+    </div>
+    <div class="header-right">
+      <div class="score-box">
+        <span class="score-label">Score</span>
+        <span class="score-value" id="scoreDisplay">0</span>
+      </div>
+      <div class="level-box">
+        <span class="level-label">Level</span>
+        <span class="level-value" id="levelDisplay">Beginner</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Layout -->
+  <div class="app-body">
+    <!-- Sidebar: Quick Topics -->
+    <aside class="sidebar">
+      <h3>📚 Topics</h3>
+      <nav class="topic-list" id="topicList">
+        <button class="topic-btn" data-topic="greetings">👋 Greetings</button>
+        <button class="topic-btn" data-topic="alphabet">🔤 Alphabet</button>
+        <button class="topic-btn" data-topic="numbers">🔢 Numbers</button>
+        <button class="topic-btn" data-topic="colors">🎨 Colors</button>
+        <button class="topic-btn" data-topic="days">📅 Days</button>
+        <button class="topic-btn" data-topic="animals">🐘 Animals</button>
+        <button class="topic-btn" data-topic="sentences">✍️ Sentences</button>
+        <button class="topic-btn" data-topic="present_tense">📝 Present Tense</button>
+        <button class="topic-btn" data-topic="vocabulary">📖 Vocabulary</button>
+      </nav>
+
+      <div class="sidebar-divider"></div>
+      <h3>🎯 Quick Actions</h3>
+      <button class="action-btn quiz-btn" id="quickQuiz">📝 Take a Quiz</button>
+      <button class="action-btn help-btn" id="quickHelp">❓ Help</button>
+      <button class="action-btn reset-btn" id="resetProgress">🔄 Reset Score</button>
+
+      <div class="sidebar-divider"></div>
+      <div class="progress-section">
+        <h3>📊 Progress</h3>
+        <div class="progress-bar-wrap">
+          <div class="progress-bar" id="progressBar" style="width: 0%"></div>
+        </div>
+        <small id="progressLabel">0 / 9 topics completed</small>
+      </div>
+    </aside>
+
+    <!-- Chat Window -->
+    <main class="chat-area">
+      <div class="chat-messages" id="chatMessages">
+        <!-- Messages injected here by JS -->
+      </div>
+
+      <!-- Input -->
+      <div class="chat-input-area">
+        <input
+          type="text"
+          id="userInput"
+          placeholder="Type a message... (e.g. 'alphabet', 'quiz', 'help')"
+          autocomplete="off"
+          autofocus
+        />
+        <button id="sendBtn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </div>
+    </main>
+  </div>
+
+  <!-- Quiz Modal -->
+  <div class="modal-overlay" id="quizModal" hidden>
+    <div class="modal">
+      <div class="modal-header">
+        <h2 id="quizTitle">📝 Quiz</h2>
+        <button class="modal-close" id="closeQuiz">✕</button>
+      </div>
+      <div class="modal-body" id="quizBody">
+        <!-- Quiz questions injected here -->
+      </div>
+      <div class="modal-footer">
+        <button class="btn-primary" id="quizNextBtn" hidden>Next Question →</button>
+        <button class="btn-success" id="quizFinishBtn" hidden>See Results 🎉</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
